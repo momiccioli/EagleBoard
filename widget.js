@@ -963,7 +963,7 @@ onAddGcode : function(addGcodeCallback, gcodeParts, eagleWidget, helpDesc){
         drillFeedrate: 100.0, // mm/min
         drillMaxDiameter: 3.00, //mm/min
         drillDepth: -1.7, // std thickness
-        depthOfDimensions: -1.7, // std thickness
+        depthOfDimensions: -1.79, // std thickness
         millDiameter: 2,
         stepDownDimensions: -0.5,
         stepDownPasses: 3, // use passes or dimension
