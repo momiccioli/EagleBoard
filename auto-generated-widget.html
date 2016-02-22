@@ -1089,11 +1089,11 @@ onAddGcode : function(addGcodeCallback, gcodeParts, eagleWidget, helpDesc){
         drillMaxDiameter: 3.00, //mm/min
         drillDepth: -1.79, // std thickness
         depthOfDimensions: -1.79, // std thickness
-        millDiameter: 2,
-        stepDownDimensions: -0.5,
+        millDiameter: .6,
+        stepDownDimensions: -0.3,
         stepDownPasses: 3, // use passes or dimension
         generateGcodeHole:function(diameter, x, y){
-            var radius = diameter/2;
+            var radius = diameter/.6;
             var gdiameter = radius-(this.millDiameter/2); // inside milling 
             var passesDeep = this.depthOfDimensions/this.stepDownPasses; // TODO: calculate my own passes
          
@@ -1123,7 +1123,7 @@ onAddGcode : function(addGcodeCallback, gcodeParts, eagleWidget, helpDesc){
             g += "G21 (mm mode)\n";
             g += "G90 (abs mode)\n";
             g += "M3 (spindle on)\n";
-            g += "TO M6 (set tool)\n"
+            g += "T0 M6 (set tool)\n"
             return g;
         },
         exportGcodeMilling:function(){
